@@ -23,7 +23,7 @@ export default function Home() {
       <header className="border-b border-[#1a1d24] bg-[#0a0c0f]/90 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
-            <span className="text-[#ebebef] font-semibold text-lg tracking-tight">Holofield</span>
+            <span className="text-[#ebebef] text-xl font-semibold tracking-tight" style={{ fontFamily: 'Lora, serif' }}>Holofield</span>
           </div>
         </div>
       </header>
@@ -56,8 +56,10 @@ export default function Home() {
               </div>
 
               <div className="p-4 pt-3">
-                <h3 className="text-[#ebebef] font-medium text-[15px] tracking-[-0.01em] mb-1">{p.name}</h3>
-                <span className="text-[#6b7280] text-[12px] font-mono">#{p.dexNumber.toString().padStart(3, '0')}</span>
+                <h3 className="text-[#ebebef] text-[18px] tracking-[-0.01em] mb-2" style={{ fontFamily: 'Lora, serif' }}>{p.name}</h3>
+                <span className="inline-flex items-center h-[18px] px-1.5 rounded border border-[#5d8edd]/20 bg-[#5d8edd]/10 text-[#5d8edd] font-mono text-[10px]">
+                  #{p.dexNumber.toString().padStart(3, '0')}
+                </span>
               </div>
             </Link>
           ))}

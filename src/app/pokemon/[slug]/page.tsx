@@ -40,7 +40,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
       <header className="border-b border-[#1a1d24] bg-[#0a0c0f]/90 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">
-            <Link href="/" className="text-[#ebebef] font-semibold text-lg tracking-tight">
+            <Link href="/" className="text-[#ebebef] text-xl font-semibold tracking-tight" style={{ fontFamily: 'Lora, serif' }}>
               Holofield
             </Link>
           </div>
@@ -66,7 +66,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
             />
           </div>
           <div>
-            <h1 className="text-[#ebebef] text-3xl sm:text-4xl font-semibold tracking-tight">{pokemon.name}</h1>
+            <h1 className="text-[#ebebef] text-3xl sm:text-4xl font-semibold tracking-tight" style={{ fontFamily: 'Lora, serif' }}>{pokemon.name}</h1>
             <p className="text-[#6b7280] text-[14px] font-mono mt-1">#{pokemon.dexNumber.toString().padStart(3, '0')}</p>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         {/* Cameos section */}
         <section>
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-[#ebebef] text-lg font-medium">Cameos</h2>
+            <h2 className="text-[#ebebef] text-lg font-medium" style={{ fontFamily: 'Lora, serif' }}>Cameos</h2>
             <span className="text-[#6b7280] text-[13px]">{pokemon.cameos.length}</span>
           </div>
 
@@ -109,7 +109,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                 </div>
 
                 <div className="p-3 pt-2.5">
-                  <h3 className="text-[#ebebef] font-medium text-[14px] truncate leading-snug">{appearance.card}</h3>
+                  <h3 className="text-[#ebebef] text-[15px] truncate leading-snug" style={{ fontFamily: 'Lora, serif' }}>{appearance.card}</h3>
                   <p className="text-[#767a84] text-[12px] truncate mt-1">{appearance.set}</p>
                   <div className="mt-2.5 pt-2.5 border-t border-[#2a2f38] flex items-center gap-2">
                     <span className="inline-flex items-center h-[18px] px-1.5 rounded border border-[#3a3f4a]/40 bg-[#0a0c0f]/50 text-[#a2a6ac] font-mono text-[10px]">
