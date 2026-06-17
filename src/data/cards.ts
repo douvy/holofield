@@ -58,7 +58,7 @@ export const POKEMON_DATABASE: PokemonData[] = [
     slug: 'bulbasaur',
     dexNumber: 1,
     cameos: [
-      { card: 'Pokémon Valley', set: 'Miscellaneous Promos', number: '-', notes: 'Jumbo', image: '/cards/pokemon-valley.jpg', sharedWith: ['Venonat', 'Togepi', 'Elekid', 'Squirtle', 'Marill', 'Psyduck'] },
+      { card: 'Pokemon Valley', set: 'Miscellaneous Promos', number: '-', notes: 'Jumbo', image: '/cards/pokemon-valley.jpg', sharedWith: ['Venonat', 'Togepi', 'Elekid', 'Squirtle', 'Marill', 'Psyduck'] },
       { card: 'Town Volunteers', set: 'Aquapolis', number: '136' },
       { card: 'Venture Bomb', set: 'Team Rocket Returns', number: '93' },
       { card: 'Rattata', set: 'Pokémon Rumble', number: '15' },
