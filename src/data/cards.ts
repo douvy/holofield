@@ -64,7 +64,7 @@ export const POKEMON_DATABASE: PokemonData[] = [
       { card: 'Pokemon Valley', set: 'CoroCoro 1999', number: '-', notes: 'Jumbo', image: '/cards/pokemon-valley.jpg', sharedWith: ['Pikachu', 'Squirtle', 'Togepi', 'Elekid', 'Marill', 'Psyduck', 'Venonat'], artist: 'Naoyo Kimura', rarity: 'Promo' },
       { card: 'Town Volunteers', set: 'Aquapolis', number: '136', image: '/cards/town-volunteers.jpg', sharedWith: ['Squirtle', 'Wooper', 'Hoothoot'] },
       { card: 'Venture Bomb', set: 'Team Rocket Returns', number: '93', image: '/cards/venture-bomb.jpg', sharedWith: ['Torchic'] },
-      { card: 'Rattata', set: 'Pokémon Rumble', number: '15' },
+      { card: 'Rattata', set: 'Pokémon Rumble', number: '15', image: '/cards/rattata-rumble.jpg' },
       { card: 'Champions Festival', set: 'XY Promos', number: '176' },
       { card: 'Pikachu', set: 'XY-P Promos', number: '279' },
       { card: 'M Sachiko-EX', set: 'XY-P Promos', number: '298' },
