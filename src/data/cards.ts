@@ -62,6 +62,7 @@ export const POKEMON_DATABASE: PokemonData[] = [
     dexNumber: 1,
     cameos: [
       { card: 'Pokemon Valley', set: 'CoroCoro 1999', number: '-', notes: 'Jumbo', image: '/cards/pokemon-valley.jpg', sharedWith: ['Pikachu', 'Squirtle', 'Togepi', 'Elekid', 'Marill', 'Psyduck', 'Venonat'], artist: 'Naoyo Kimura', rarity: 'Promo' },
+      { card: 'Ditto', set: 'Delta Species', number: '36', notes: "Ditto's disguise", image: '/cards/ditto-delta-species.jpg' },
       { card: 'Town Volunteers', set: 'Aquapolis', number: '136', image: '/cards/town-volunteers.jpg', sharedWith: ['Squirtle', 'Wooper', 'Hoothoot'] },
       { card: 'Venture Bomb', set: 'Team Rocket Returns', number: '93', image: '/cards/venture-bomb.jpg', sharedWith: ['Torchic'] },
       { card: 'Rattata', set: 'Pokémon Rumble', number: '15', image: '/cards/rattata-rumble.jpg' },
@@ -70,7 +71,6 @@ export const POKEMON_DATABASE: PokemonData[] = [
       { card: "Red's Challenge", set: 'Tag All Stars', number: '201', image: 'https://tcgplayer-cdn.tcgplayer.com/product/572855_in_1000x1000.jpg' },
       { card: "Rescue Team DX's Pikachu", set: 'S-P Promos', number: '36', image: 'https://tcgplayer-cdn.tcgplayer.com/product/597256_in_1000x1000.jpg', sharedWith: ['Pelipper'] },
       { card: "Poké-lun TV's Pikachu and Friends", set: 'S-P Promos', number: '-', notes: 'Jumbo', image: 'https://tcgplayer-cdn.tcgplayer.com/product/597518_in_1000x1000.jpg', sharedWith: ['Shinx'] },
-      { card: 'Ditto', set: 'Delta Species', number: '36', notes: "Ditto's disguise" },
       { card: "Team Rocket's Meowth", set: 'Wizards Promos', number: '18', notes: 'silhouette' },
       { card: 'Pokémon Communication', set: 'Team Up', number: '152b' },
       { card: 'Champions Festival', set: 'SM Promos', number: '231', notes: 'picture' },
