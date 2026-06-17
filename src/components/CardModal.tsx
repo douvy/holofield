@@ -39,7 +39,7 @@ export function CardModal({ card, onClose }: CardModalProps) {
                   style={{ backgroundImage: DIAGONAL_LINES_SVG }}
                 />
                 <div className="absolute -inset-2 rounded-lg border border-[#2a2f38] pointer-events-none" />
-                <div className="relative w-[180px] sm:w-[220px] aspect-[245/342] rounded-lg overflow-hidden bg-[#1a1d24]">
+                <div className="relative w-[260px] sm:w-[280px] aspect-[245/342] rounded-lg overflow-hidden bg-[#1a1d24]">
                   {card.image ? (
                     <img
                       src={card.image}
