@@ -1,5 +1,3 @@
-'use client';
-
 import { getPokemonSprite } from '@/data/cards';
 
 export function SharedPokemonSprite({ name }: { name: string }) {
@@ -8,11 +6,10 @@ export function SharedPokemonSprite({ name }: { name: string }) {
 
   return (
     <img
-      src={sprite.gif}
+      src={sprite.fallback}
       alt={name}
       title={name}
       className="w-6 h-6 object-contain opacity-70 hover:opacity-100 transition-opacity"
-      onError={(e) => { e.currentTarget.src = sprite.fallback; }}
     />
   );
 }
