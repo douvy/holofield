@@ -66,7 +66,7 @@ export const POKEMON_DATABASE: PokemonData[] = [
       { card: 'Venture Bomb', set: 'Team Rocket Returns', number: '93', image: '/cards/venture-bomb.jpg', sharedWith: ['Torchic'] },
       { card: 'Rattata', set: 'Pokémon Rumble', number: '15', image: '/cards/rattata-rumble.jpg' },
       { card: 'Champions Festival', set: 'XY Promos', number: '176', image: 'https://tcgplayer-cdn.tcgplayer.com/product/199330_in_1000x1000.jpg', sharedWith: ['Pikachu', 'Squirtle', 'Charmander', 'Psyduck', 'Krabby'] },
-      { card: 'Pikachu', set: 'XY-P Promos', number: '279' },
+      { card: 'Pikachu', set: 'XY-P Promos', number: '279', image: 'https://tcgplayer-cdn.tcgplayer.com/product/602183_in_1000x1000.jpg', sharedWith: ['Charmander', 'Squirtle'] },
       { card: 'M Sachiko-EX', set: 'XY-P Promos', number: '298' },
       { card: "Red's Challenge", set: 'Tag All Stars', number: '201' },
       { card: "Rescue Team DX's Pikachu", set: 'S-P Promos', number: '36' },
