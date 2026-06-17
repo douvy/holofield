@@ -62,18 +62,22 @@ export function CardModal({ card, onClose }: CardModalProps) {
             </div>
 
             {/* Details Section */}
-            <div className="px-5 py-4 border-t border-[#1d1f26] space-y-2">
-              <div className="flex justify-between text-[13px]">
-                <span className="text-[#6b7280]">Number</span>
-                <span className="text-[#ebebef]">#{card.number}</span>
+            {((card.number && card.number !== '-') || card.notes) && (
+              <div className="px-5 py-4 border-t border-[#1d1f26] space-y-2">
+                {card.number && card.number !== '-' && (
+                  <div className="flex justify-between text-[13px]">
+                    <span className="text-[#6b7280]">Number</span>
+                    <span className="text-[#ebebef]">#{card.number}</span>
+                  </div>
+                )}
+                {card.notes && (
+                  <div className="flex justify-between text-[13px]">
+                    <span className="text-[#6b7280]">Notes</span>
+                    <span className="text-[#ebebef]">{card.notes}</span>
+                  </div>
+                )}
               </div>
-              {card.notes && (
-                <div className="flex justify-between text-[13px]">
-                  <span className="text-[#6b7280]">Notes</span>
-                  <span className="text-[#ebebef]">{card.notes}</span>
-                </div>
-              )}
-            </div>
+            )}
 
             {/* Shared Pokemon */}
             {card.sharedWith && card.sharedWith.length > 0 && (

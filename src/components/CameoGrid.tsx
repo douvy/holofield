@@ -71,14 +71,18 @@ export function CameoGrid({ cameos }: CameoGridProps) {
             <div className="p-3 pt-2.5">
               <h3 className="text-[#ebebef] text-[15px] truncate leading-snug" style={{ fontFamily: 'Lora, serif' }}>{appearance.card}</h3>
               <p className="text-[#767a84] text-[12px] truncate mt-1">{appearance.set}</p>
-              <div className="mt-2.5 pt-2.5 border-t border-[#2a2f38] flex items-center gap-2">
-                <span className="inline-flex items-center h-[18px] px-1.5 rounded border border-[#3a3f4a]/40 bg-[#0a0c0f]/50 text-[#a2a6ac] font-mono text-[10px]">
-                  #{appearance.number}
-                </span>
-                {appearance.notes && (
-                  <span className="text-[#6b7280] text-[10px] italic truncate">{appearance.notes}</span>
-                )}
-              </div>
+              {(appearance.number && appearance.number !== '-') || appearance.notes ? (
+                <div className="mt-2.5 pt-2.5 border-t border-[#2a2f38] flex items-center gap-2">
+                  {appearance.number && appearance.number !== '-' && (
+                    <span className="inline-flex items-center h-[18px] px-1.5 rounded border border-[#3a3f4a]/40 bg-[#0a0c0f]/50 text-[#a2a6ac] font-mono text-[10px]">
+                      #{appearance.number}
+                    </span>
+                  )}
+                  {appearance.notes && (
+                    <span className="text-[#6b7280] text-[10px] italic truncate">{appearance.notes}</span>
+                  )}
+                </div>
+              ) : null}
               {appearance.sharedWith && appearance.sharedWith.length > 0 && (
                 <div className="mt-2.5 pt-2.5 border-t border-[#2a2f38] flex items-center gap-1 flex-wrap">
                   {appearance.sharedWith.map((name) => (
