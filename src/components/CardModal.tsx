@@ -25,8 +25,8 @@ export function CardModal({ card, onClose }: CardModalProps) {
           <div className="bg-[#111216] rounded-lg border border-[#1d1f26] overflow-hidden relative">
             <button
               type="button"
-              onPointerDown={(e) => { e.stopPropagation(); onClose(); }}
-              className="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center rounded-sm bg-transparent border border-[#2a2f38]/60 hover:border-[#4a4f58] hover:bg-[#ffffff]/5 transition-colors touch-none cursor-pointer"
+              onClick={(e) => { e.stopPropagation(); onClose(); }}
+              className="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center rounded-sm bg-transparent border border-[#2a2f38]/60 hover:border-[#4a4f58] hover:bg-[#ffffff]/5 transition-colors cursor-pointer"
             >
               <X className="w-4 h-4 text-[#6b7280]" />
             </button>
