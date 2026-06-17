@@ -58,10 +58,10 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1d24]/20 via-transparent to-transparent" />
       </div>
 
-      <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8 relative">
+      <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-4 pb-8 relative">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-[#6b7280] hover:text-[#ebebef] text-[13px] mb-4 transition-colors"
+          className="inline-flex items-center gap-1 text-[#6b7280] hover:text-[#ebebef] text-[13px] mb-2 transition-colors"
         >
           <ChevronLeft className="w-4 h-4" />
           Back
