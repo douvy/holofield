@@ -3,6 +3,7 @@ import { getAllPokemon, getAnimatedSprite } from '@/data/cards';
 
 const DIAGONAL_LINES_SVG = `url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6L6 0' stroke='%23ffffff' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`;
 const DIAGONAL_LINES_HOVER_SVG = `url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6L6 0' stroke='%23ffffff' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`;
+const GRID_SVG = `url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0H0V12' stroke='%23ffffff' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`;
 
 export const metadata = {
   title: 'Holofield',
@@ -14,6 +15,15 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0a0c0f] relative">
+      {/* Grid background */}
+      <div className="fixed inset-0 top-14 overflow-hidden pointer-events-none">
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{ backgroundImage: GRID_SVG, backgroundSize: '12px 12px' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1d24]/20 via-transparent to-transparent" />
+      </div>
+
       {/* Side borders */}
       <div className="hidden lg:block fixed left-0 top-0 bottom-0 w-8 bg-[#08090c]" />
       <div className="hidden lg:block fixed right-0 top-0 bottom-0 w-8 bg-[#08090c]" />
@@ -28,13 +38,13 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+      <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-12 pb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {pokemon.map((p, index) => (
             <Link
               key={p.slug}
               href={`/pokemon/${p.slug}`}
-              className="group relative bg-[#14161a] rounded-lg border border-[#2a2f38] border-b-2 hover:border-[#4a4f58] transition-colors duration-150 [box-shadow:inset_0_-2px_0_0_rgba(255,255,255,0.02)] animate-fade-in"
+              className="group relative bg-[#14161a] rounded-lg border border-[#2a2f38] border-b-2 hover:border-[#4a4f58] transition-all duration-150 [box-shadow:inset_0_-2px_0_0_rgba(255,255,255,0.02)] animate-fade-in"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <div className="p-4 relative border-b border-[#2a2f38] group-hover:border-[#4a4f58] transition-colors">

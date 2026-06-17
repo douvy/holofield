@@ -5,6 +5,7 @@ import { getPokemonBySlug, getAllPokemon, getAnimatedSprite } from '@/data/cards
 
 const DIAGONAL_LINES_SVG = `url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6L6 0' stroke='%23ffffff' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`;
 const DIAGONAL_LINES_HOVER_SVG = `url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6L6 0' stroke='%23ffffff' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`;
+const GRID_SVG = `url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0H0V12' stroke='%23ffffff' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`;
 
 export async function generateStaticParams() {
   return getAllPokemon().map((p) => ({ slug: p.slug }));
@@ -47,7 +48,17 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
+      {/* Hero background */}
+      <div className="absolute inset-x-0 top-14 h-64 overflow-hidden pointer-events-none">
+        <div
+          className="absolute inset-0 opacity-[0.05]"
+          style={{ backgroundImage: GRID_SVG, backgroundSize: '12px 12px' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a0c0f]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1d24]/20 via-transparent to-transparent" />
+      </div>
+
+      <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8 relative">
         <Link
           href="/"
           className="inline-flex items-center gap-1 text-[#6b7280] hover:text-[#ebebef] text-[13px] mb-4 transition-colors"
