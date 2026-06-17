@@ -62,8 +62,20 @@ export function CardModal({ card, onClose }: CardModalProps) {
             </div>
 
             {/* Details Section */}
-            {((card.number && card.number !== '-') || card.notes) && (
+            {((card.number && card.number !== '-') || card.notes || card.artist || card.rarity) && (
               <div className="px-5 py-4 border-t border-[#1d1f26] space-y-2">
+                {card.artist && (
+                  <div className="flex justify-between text-[13px]">
+                    <span className="text-[#6b7280]">Artist</span>
+                    <span className="text-[#ebebef]">{card.artist}</span>
+                  </div>
+                )}
+                {card.rarity && (
+                  <div className="flex justify-between text-[13px]">
+                    <span className="text-[#6b7280]">Rarity</span>
+                    <span className="text-[#ebebef]">{card.rarity}</span>
+                  </div>
+                )}
                 {card.number && card.number !== '-' && (
                   <div className="flex justify-between text-[13px]">
                     <span className="text-[#6b7280]">Number</span>

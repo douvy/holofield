@@ -7,6 +7,8 @@ export interface CardAppearance {
   notes?: string;
   image?: string;
   sharedWith?: string[]; // Other Pokemon appearing on this card
+  artist?: string;
+  rarity?: string;
 }
 
 export interface PokemonData {
@@ -58,7 +60,7 @@ export const POKEMON_DATABASE: PokemonData[] = [
     slug: 'bulbasaur',
     dexNumber: 1,
     cameos: [
-      { card: 'Pokemon Valley', set: 'Miscellaneous Promos', number: '-', notes: 'Jumbo', image: '/cards/pokemon-valley.jpg', sharedWith: ['Venonat', 'Togepi', 'Elekid', 'Squirtle', 'Marill', 'Psyduck'] },
+      { card: 'Pokemon Valley', set: 'CoroCoro 1999', number: '-', notes: 'Jumbo', image: '/cards/pokemon-valley.jpg', sharedWith: ['Venonat', 'Togepi', 'Elekid', 'Squirtle', 'Marill', 'Psyduck'], artist: 'Naoyo Kimura', rarity: 'Promo' },
       { card: 'Town Volunteers', set: 'Aquapolis', number: '136' },
       { card: 'Venture Bomb', set: 'Team Rocket Returns', number: '93' },
       { card: 'Rattata', set: 'Pokémon Rumble', number: '15' },

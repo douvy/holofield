@@ -19,6 +19,7 @@ export function CameoGrid({ cameos }: CameoGridProps) {
     const handleKeydown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && selectedCard) {
         setSelectedCard(null);
+        (document.activeElement as HTMLElement)?.blur();
       }
     };
     window.addEventListener('keydown', handleKeydown);
