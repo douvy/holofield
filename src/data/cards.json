@@ -1,0 +1,46 @@
+{
+  "42371": {
+    "tcgPlayerId": "42371",
+    "name": "Chansey",
+    "setName": "Base Set (Shadowless)",
+    "cardNumber": "3/102",
+    "rarity": "Holo Rare",
+    "imageCdnUrl800": "https://tcgplayer-cdn.tcgplayer.com/product/42371_in_800x800.jpg",
+    "prices": {
+      "market": 199.99
+    }
+  },
+  "84482": {
+    "tcgPlayerId": "84482",
+    "name": "Crobat",
+    "setName": "Neo Revelation",
+    "cardNumber": "04/64",
+    "rarity": "Holo Rare",
+    "imageCdnUrl800": "https://tcgplayer-cdn.tcgplayer.com/product/84482_in_800x800.jpg",
+    "prices": {
+      "market": 190
+    }
+  },
+  "631881": {
+    "tcgPlayerId": "631881",
+    "name": "Rocket's Wobbuffet",
+    "setName": "Pokemon VS (JP)",
+    "cardNumber": "093/141",
+    "rarity": "Rare",
+    "imageCdnUrl800": "/cards/rockets-wobbuffet-vs.jpg",
+    "prices": {
+      "market": 1200
+    }
+  },
+  "vm2007gold": {
+    "tcgPlayerId": "vm2007gold",
+    "name": "Victory Medal Gym Challenge - Gold",
+    "setName": "2007 Pokemon Japanese Promo",
+    "cardNumber": "—",
+    "rarity": "Promo",
+    "imageCdnUrl800": "/cards/pikachu-gold-medal-2007.jpg",
+    "prices": {
+      "market": 960
+    }
+  }
+}
