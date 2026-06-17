@@ -4,7 +4,7 @@ import { ChevronLeft } from 'lucide-react';
 import { getPokemonBySlug, getAllPokemon, getAnimatedSprite } from '@/data/cards';
 
 const DIAGONAL_LINES_SVG = `url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6L6 0' stroke='%23ffffff' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`;
-const DIAGONAL_LINES_BLUE_SVG = `url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6L6 0' stroke='%23F54E00' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`;
+const DIAGONAL_LINES_HOVER_SVG = `url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6L6 0' stroke='%23ffffff' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`;
 
 export async function generateStaticParams() {
   return getAllPokemon().map((p) => ({ slug: p.slug }));
@@ -82,17 +82,17 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
             {pokemon.cameos.map((appearance, i) => (
               <div
                 key={`${appearance.card}-${appearance.set}-${i}`}
-                className="group relative bg-[#14161a] rounded-lg border border-[#2a2f38] border-b-2 hover:border-[#F54E00]/50 transition-colors duration-150 [box-shadow:inset_0_-2px_0_0_rgba(255,255,255,0.02)] animate-fade-in"
+                className="group relative bg-[#14161a] rounded-lg border border-[#2a2f38] border-b-2 hover:border-[#4a4f58] transition-colors duration-150 [box-shadow:inset_0_-2px_0_0_rgba(255,255,255,0.02)] animate-fade-in"
                 style={{ animationDelay: `${i * 30}ms` }}
               >
-                <div className="p-2.5 relative border-b border-[#2a2f38] group-hover:border-[#F54E00]/40 transition-colors">
+                <div className="p-2.5 relative border-b border-[#2a2f38] group-hover:border-[#4a4f58] transition-colors">
                   <div
                     className="absolute inset-0 opacity-[0.08] group-hover:opacity-0 transition-opacity pointer-events-none rounded-t-lg"
                     style={{ backgroundImage: DIAGONAL_LINES_SVG }}
                   />
                   <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-[0.25] transition-opacity pointer-events-none rounded-t-lg"
-                    style={{ backgroundImage: DIAGONAL_LINES_BLUE_SVG }}
+                    className="absolute inset-0 opacity-0 group-hover:opacity-[0.10] transition-opacity pointer-events-none rounded-t-lg"
+                    style={{ backgroundImage: DIAGONAL_LINES_HOVER_SVG }}
                   />
 
                   <div className="relative rounded-lg overflow-hidden aspect-[245/342] bg-[#1a1d24]">
