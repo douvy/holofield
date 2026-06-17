@@ -71,7 +71,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         <div className="flex flex-col items-center sm:flex-row sm:items-center gap-4 sm:gap-6 mb-4">
           <div className="text-center sm:text-left sm:flex-1 order-1 sm:order-none">
             <h1 className="text-[#ebebef] text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-none" style={{ fontFamily: 'Lora, serif' }}>{pokemon.name}</h1>
-            <p className="text-[#6b7280] text-[15px] font-mono mt-3">#{pokemon.dexNumber.toString().padStart(3, '0')}</p>
+            <span className="inline-flex items-center h-[22px] px-2 mt-3 rounded border border-[#3a3f4a]/40 bg-[#0a0c0f]/50 text-[#a2a6ac] font-mono text-[12px]">#{pokemon.dexNumber.toString().padStart(3, '0')}</span>
           </div>
           <div className="relative w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 shrink-0 order-2 sm:order-none">
             <img

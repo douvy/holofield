@@ -60,7 +60,7 @@ export const POKEMON_DATABASE: PokemonData[] = [
     slug: 'bulbasaur',
     dexNumber: 1,
     cameos: [
-      { card: 'Pokemon Valley', set: 'CoroCoro 1999', number: '-', notes: 'Jumbo', image: '/cards/pokemon-valley.jpg', sharedWith: ['Venonat', 'Togepi', 'Elekid', 'Squirtle', 'Marill', 'Psyduck'], artist: 'Naoyo Kimura', rarity: 'Promo' },
+      { card: 'Pokemon Valley', set: 'CoroCoro 1999', number: '-', notes: 'Jumbo', image: '/cards/pokemon-valley.jpg', sharedWith: ['Pikachu', 'Squirtle', 'Togepi', 'Elekid', 'Marill', 'Psyduck', 'Venonat'], artist: 'Naoyo Kimura', rarity: 'Promo' },
       { card: 'Town Volunteers', set: 'Aquapolis', number: '136', image: '/cards/town-volunteers.jpg', sharedWith: ['Squirtle', 'Wooper', 'Hoothoot'] },
       { card: 'Venture Bomb', set: 'Team Rocket Returns', number: '93' },
       { card: 'Rattata', set: 'Pokémon Rumble', number: '15' },
