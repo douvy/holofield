@@ -23,8 +23,8 @@ const POKEDEX_NUMBERS: Record<string, number> = {
   bulbasaur: 1, ivysaur: 2, venusaur: 3, charmander: 4, charmeleon: 5, charizard: 6,
   squirtle: 7, wartortle: 8, blastoise: 9, pikachu: 25, raichu: 26,
   venonat: 48, venomoth: 49, psyduck: 54, golduck: 55,
-  togepi: 175, togetic: 176, marill: 183, azumarill: 184,
-  elekid: 239, electabuzz: 125, electivire: 466,
+  togepi: 175, togetic: 176, marill: 183, azumarill: 184, wooper: 194, quagsire: 195,
+  hoothoot: 163, noctowl: 164, elekid: 239, electabuzz: 125, electivire: 466,
 };
 
 // Collectr animated sprites
@@ -61,7 +61,7 @@ export const POKEMON_DATABASE: PokemonData[] = [
     dexNumber: 1,
     cameos: [
       { card: 'Pokemon Valley', set: 'CoroCoro 1999', number: '-', notes: 'Jumbo', image: '/cards/pokemon-valley.jpg', sharedWith: ['Venonat', 'Togepi', 'Elekid', 'Squirtle', 'Marill', 'Psyduck'], artist: 'Naoyo Kimura', rarity: 'Promo' },
-      { card: 'Town Volunteers', set: 'Aquapolis', number: '136' },
+      { card: 'Town Volunteers', set: 'Aquapolis', number: '136', image: '/cards/town-volunteers.jpg', sharedWith: ['Squirtle', 'Wooper', 'Hoothoot'] },
       { card: 'Venture Bomb', set: 'Team Rocket Returns', number: '93' },
       { card: 'Rattata', set: 'Pokémon Rumble', number: '15' },
       { card: 'Champions Festival', set: 'XY Promos', number: '176' },

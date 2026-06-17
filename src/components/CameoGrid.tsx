@@ -37,7 +37,7 @@ export function CameoGrid({ cameos }: CameoGridProps) {
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 items-start">
         {cameos.map((appearance, i) => (
           <button
             key={`${appearance.card}-${appearance.set}-${i}`}
