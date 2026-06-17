@@ -31,7 +31,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
   }
 
   return (
-    <div className="min-h-screen bg-[#0a0c0f] relative">
+    <div className="min-h-screen bg-[#0a0c0f] relative overflow-x-hidden lg:px-8">
       {/* Side borders */}
       <div className="hidden lg:block fixed left-0 top-0 bottom-0 w-8 bg-[#08090c]" />
       <div className="hidden lg:block fixed right-0 top-0 bottom-0 w-8 bg-[#08090c]" />
