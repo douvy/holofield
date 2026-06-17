@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ChevronLeft } from 'lucide-react';
 import { getPokemonBySlug, getAllPokemon, getAnimatedSprite } from '@/data/cards';
+import { SharedPokemonSprite } from '@/components/SharedPokemonSprite';
 
 const DIAGONAL_LINES_SVG = `url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6L6 0' stroke='%23ffffff' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`;
 const DIAGONAL_LINES_HOVER_SVG = `url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6L6 0' stroke='%23ffffff' stroke-width='0.5' fill='none'/%3E%3C/svg%3E")`;
@@ -94,7 +95,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         <section>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-[#ebebef] text-lg font-medium" style={{ fontFamily: 'Lora, serif' }}>Cameos</h2>
-            <span className="text-[#6b7280] text-[13px]">{pokemon.cameos.length}</span>
+            <span className="inline-flex items-center h-[18px] px-1.5 rounded border border-[#3a3f4a]/40 bg-[#0a0c0f]/50 text-[#a2a6ac] font-mono text-[10px]">{pokemon.cameos.length}</span>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
@@ -138,6 +139,13 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                       <span className="text-[#6b7280] text-[10px] italic truncate">{appearance.notes}</span>
                     )}
                   </div>
+                  {appearance.sharedWith && appearance.sharedWith.length > 0 && (
+                    <div className="mt-2.5 pt-2.5 border-t border-[#2a2f38] flex items-center gap-1 flex-wrap">
+                      {appearance.sharedWith.map((name) => (
+                        <SharedPokemonSprite key={name} name={name} />
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

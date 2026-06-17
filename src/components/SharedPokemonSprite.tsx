@@ -1,0 +1,18 @@
+'use client';
+
+import { getPokemonSprite } from '@/data/cards';
+
+export function SharedPokemonSprite({ name }: { name: string }) {
+  const sprite = getPokemonSprite(name);
+  if (!sprite) return null;
+
+  return (
+    <img
+      src={sprite.gif}
+      alt={name}
+      title={name}
+      className="w-6 h-6 object-contain opacity-70 hover:opacity-100 transition-opacity"
+      onError={(e) => { e.currentTarget.src = sprite.fallback; }}
+    />
+  );
+}
