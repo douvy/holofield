@@ -50,25 +50,33 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
       <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-[#6b7280] hover:text-[#ebebef] text-[13px] mb-8 transition-colors"
+          className="inline-flex items-center gap-1 text-[#6b7280] hover:text-[#ebebef] text-[13px] mb-4 transition-colors"
         >
           <ChevronLeft className="w-4 h-4" />
           Back
         </Link>
 
         {/* Pokemon header */}
-        <div className="flex items-center gap-6 mb-12">
-          <div className="relative w-28 h-28 sm:w-36 sm:h-36 shrink-0">
+        <div className="flex flex-col items-center sm:flex-row sm:items-center gap-6 sm:gap-8 mb-8">
+          <div className="text-center sm:text-left sm:flex-1 order-1 sm:order-none">
+            <h1 className="text-[#ebebef] text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-none" style={{ fontFamily: 'Lora, serif' }}>{pokemon.name}</h1>
+            <p className="text-[#6b7280] text-[15px] font-mono mt-3">#{pokemon.dexNumber.toString().padStart(3, '0')}</p>
+          </div>
+          <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 shrink-0 order-2 sm:order-none">
             <img
               src={getAnimatedSprite(pokemon.name)}
               alt={pokemon.name}
-              className="w-full h-full object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)]"
+              className="w-full h-full object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)] sm:-mt-3"
             />
           </div>
-          <div>
-            <h1 className="text-[#ebebef] text-3xl sm:text-4xl font-semibold tracking-tight" style={{ fontFamily: 'Lora, serif' }}>{pokemon.name}</h1>
-            <p className="text-[#6b7280] text-[14px] font-mono mt-1">#{pokemon.dexNumber.toString().padStart(3, '0')}</p>
-          </div>
+        </div>
+
+        {/* Diagonal separator */}
+        <div className="h-[13px] mb-6 border-t border-b border-[#1a1d24] relative left-1/2 -translate-x-1/2 w-screen lg:w-[calc(100vw-69px)]">
+          <div
+            className="absolute inset-0 opacity-[0.06]"
+            style={{ backgroundImage: DIAGONAL_LINES_SVG, backgroundSize: '6px 6px' }}
+          />
         </div>
 
         {/* Cameos section */}
