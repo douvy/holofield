@@ -25,6 +25,7 @@ const POKEDEX_NUMBERS: Record<string, number> = {
   venonat: 48, venomoth: 49, psyduck: 54, golduck: 55,
   togepi: 175, togetic: 176, marill: 183, azumarill: 184, wooper: 194, quagsire: 195,
   hoothoot: 163, noctowl: 164, elekid: 239, electabuzz: 125, electivire: 466,
+  torchic: 255, combusken: 256, blaziken: 257,
 };
 
 // Collectr animated sprites
@@ -62,7 +63,7 @@ export const POKEMON_DATABASE: PokemonData[] = [
     cameos: [
       { card: 'Pokemon Valley', set: 'CoroCoro 1999', number: '-', notes: 'Jumbo', image: '/cards/pokemon-valley.jpg', sharedWith: ['Pikachu', 'Squirtle', 'Togepi', 'Elekid', 'Marill', 'Psyduck', 'Venonat'], artist: 'Naoyo Kimura', rarity: 'Promo' },
       { card: 'Town Volunteers', set: 'Aquapolis', number: '136', image: '/cards/town-volunteers.jpg', sharedWith: ['Squirtle', 'Wooper', 'Hoothoot'] },
-      { card: 'Venture Bomb', set: 'Team Rocket Returns', number: '93' },
+      { card: 'Venture Bomb', set: 'Team Rocket Returns', number: '93', image: '/cards/venture-bomb.jpg', sharedWith: ['Torchic'] },
       { card: 'Rattata', set: 'Pokémon Rumble', number: '15' },
       { card: 'Champions Festival', set: 'XY Promos', number: '176' },
       { card: 'Pikachu', set: 'XY-P Promos', number: '279' },

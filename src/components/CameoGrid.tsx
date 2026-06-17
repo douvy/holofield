@@ -80,7 +80,7 @@ export function CameoGrid({ cameos }: CameoGridProps) {
                     </span>
                   )}
                   {appearance.notes && (
-                    <span className="text-[#6b7280] text-[10px] italic truncate">{appearance.notes}</span>
+                    <span className="text-[#6b7280] text-[10px] truncate">{appearance.notes}</span>
                   )}
                 </div>
               ) : null}

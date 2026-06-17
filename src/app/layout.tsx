@@ -9,10 +9,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Holofield",
     description: "Discover cameos, perspectives, and hidden details in Pokémon TCG art.",
+    images: ["/og.jpg"],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Holofield",
+    images: ["/og.jpg"],
   },
 };
 
