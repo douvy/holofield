@@ -25,7 +25,7 @@ const POKEDEX_NUMBERS: Record<string, number> = {
   venonat: 48, venomoth: 49, psyduck: 54, golduck: 55, krabby: 98, kingler: 99,
   togepi: 175, togetic: 176, marill: 183, azumarill: 184, wooper: 194, quagsire: 195,
   hoothoot: 163, noctowl: 164, elekid: 239, electabuzz: 125, electivire: 466,
-  torchic: 255, combusken: 256, blaziken: 257,
+  torchic: 255, combusken: 256, blaziken: 257, wingull: 278, pelipper: 279,
 };
 
 // Collectr animated sprites
@@ -68,7 +68,7 @@ export const POKEMON_DATABASE: PokemonData[] = [
       { card: 'Champions Festival', set: 'XY Promos', number: '176', image: 'https://tcgplayer-cdn.tcgplayer.com/product/199330_in_1000x1000.jpg', sharedWith: ['Pikachu', 'Squirtle', 'Charmander', 'Psyduck', 'Krabby'] },
       { card: 'Pikachu', set: 'XY-P Promos', number: '279', image: 'https://tcgplayer-cdn.tcgplayer.com/product/602183_in_1000x1000.jpg', sharedWith: ['Charmander', 'Squirtle'] },
       { card: "Red's Challenge", set: 'Tag All Stars', number: '201', image: 'https://tcgplayer-cdn.tcgplayer.com/product/572855_in_1000x1000.jpg' },
-      { card: "Rescue Team DX's Pikachu", set: 'S-P Promos', number: '36' },
+      { card: "Rescue Team DX's Pikachu", set: 'S-P Promos', number: '36', image: 'https://tcgplayer-cdn.tcgplayer.com/product/597256_in_1000x1000.jpg', sharedWith: ['Pelipper'] },
       { card: "Poké-lun TV's Pikachu and Friends", set: 'S-P Promos', number: '-', notes: 'Jumbo' },
       { card: 'Ditto', set: 'Delta Species', number: '36', notes: "Ditto's disguise" },
       { card: "Team Rocket's Meowth", set: 'Wizards Promos', number: '18', notes: 'silhouette' },
